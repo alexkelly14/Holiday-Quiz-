@@ -12,6 +12,7 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "xmas tree2")!)
     }
 
 }
