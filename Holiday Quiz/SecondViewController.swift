@@ -19,13 +19,66 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "xmas tree2")!)
+     chooseQuestion()
+    }
+    @IBAction func onAnswer0Tapped(_ sender: UIButton) {
+        if correctAnswer == "0"
+        {
+            ifAnswerCorrect()
+        answer0Button.backgroundColor = UIColor.green
+        }
+        else
+        {
+            ifAnswerWrong()
+        answer0Button.backgroundColor = UIColor.red
+        }
     }
     
+    @IBAction func onAnwer1Tapped(_ sender: UIButton) {
+        if correctAnswer == "1"
+        {
+            ifAnswerCorrect()
+            answer1Button.backgroundColor = UIColor.green
+        }
+        else
+        {
+            ifAnswerWrong()
+            answer1Button.backgroundColor = UIColor.red
+        }
+    }
+    
+    @IBAction func onAnswer2Tapped(_ sender: UIButton) {
+        if correctAnswer == "2"
+        {
+            ifAnswerCorrect()
+            answer2Button.backgroundColor = UIColor.green
+        }
+        else
+        {
+            ifAnswerWrong()
+            answer2Button.backgroundColor = UIColor.red
+        }
+    }
+    
+    @IBAction func onAnswer3Tapped(_ sender: UIButton) {
+        if correctAnswer == "3"
+        {
+            ifAnswerCorrect()
+            answer3Button.backgroundColor = UIColor.green
+        }
+        else
+        {
+            ifAnswerWrong()
+            answer3Button.backgroundColor = UIColor.red
+        }
+    }
+    
+    @IBAction func onNextTapped(_ sender: UIButton) {
+        chooseQuestion()
+        restColors()
+    }
     func chooseQuestion() {
         var questionNumber = arc4random() % 5
-        questionNumber += 1
         switch (questionNumber) {
         case 0:
             questionLabel.text = "What is Scrooge's first name?"
@@ -65,12 +118,31 @@ class SecondViewController: UIViewController {
             answer1Button.setTitle("Puppy", for: UIControlState.normal)
             answer2Button.setTitle("Doll House", for: UIControlState.normal)
             answer3Button.setTitle("A Bell", for: UIControlState.normal)
-            correctAnswer = "2"
+            correctAnswer = "3"
             break
-
         default:
             break
         }
     }
+    func restColors(){
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "xmas tree2")!)
+        answer0Button.backgroundColor = UIColor.clear
+        answer1Button.backgroundColor = UIColor.clear
+        answer2Button.backgroundColor = UIColor.clear
+        answer3Button.backgroundColor = UIColor.clear
+    }
+    func ifAnswerCorrect() {
+        answer0Button.backgroundColor = UIColor.green
+        answer1Button.backgroundColor = UIColor.green
+        answer2Button.backgroundColor = UIColor.green
+        answer3Button.backgroundColor = UIColor.green
+    }
+    func ifAnswerWrong() {
+        answer0Button.backgroundColor = UIColor.red
+        answer1Button.backgroundColor = UIColor.red
+        answer2Button.backgroundColor = UIColor.red
+        answer3Button.backgroundColor = UIColor.red
 
+    }
 }
+
