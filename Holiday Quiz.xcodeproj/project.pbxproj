@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC2A80321E0028E300998CCF /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A80311E0028E300998CCF /* Question.swift */; };
 		FC3501E31DF719C30002E3E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3501E21DF719C30002E3E2 /* AppDelegate.swift */; };
 		FC3501E51DF719C30002E3E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3501E41DF719C30002E3E2 /* ViewController.swift */; };
 		FC3501E81DF719C30002E3E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3501E61DF719C30002E3E2 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC2A80311E0028E300998CCF /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		FC3501DF1DF719C30002E3E2 /* Holiday Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Holiday Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3501E21DF719C30002E3E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC3501E41DF719C30002E3E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				FC3501E21DF719C30002E3E2 /* AppDelegate.swift */,
 				FC3501E41DF719C30002E3E2 /* ViewController.swift */,
 				FC3502121DF87B780002E3E2 /* SecondViewController.swift */,
+				FC2A80311E0028E300998CCF /* Question.swift */,
 				FC3501E61DF719C30002E3E2 /* Main.storyboard */,
 				FC3501E91DF719C30002E3E2 /* Assets.xcassets */,
 				FC3501EB1DF719C30002E3E2 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC3502131DF87B780002E3E2 /* SecondViewController.swift in Sources */,
+				FC2A80321E0028E300998CCF /* Question.swift in Sources */,
 				FC3501E51DF719C30002E3E2 /* ViewController.swift in Sources */,
 				FC3501E31DF719C30002E3E2 /* AppDelegate.swift in Sources */,
 			);
