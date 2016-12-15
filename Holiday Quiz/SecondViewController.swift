@@ -54,26 +54,59 @@ class SecondViewController: UIViewController {
     
     @IBAction func onAnswer0Tapped(_ sender: UIButton) {
         answer = 0
+        if (correctAnswer == answer)
+        {
+            score += 0
+        }
         displayAnswer()
     }
     
     @IBAction func onAnwer1Tapped(_ sender: UIButton) {
         answer = 1
+        if (correctAnswer == answer)
+        {
+            score += 0
+        }
+
         displayAnswer()
     }
     
     @IBAction func onAnswer2Tapped(_ sender: UIButton) {
         answer = 2
+        if (correctAnswer == answer)
+        {
+            score += 0
+        }
+
         displayAnswer()
     }
     
     @IBAction func onAnswer3Tapped(_ sender: UIButton) {
         answer = 3
+        if (correctAnswer == answer)
+        {
+            score += 0
+        }
+
         displayAnswer()
     }
     
     @IBAction func onNextTapped(_ sender: UIButton) {
+        if questions.count > 0
+        {
         chooseQuestion()
+        }
+        else
+        {
+            let message = "Score"
+            let alert = UIAlertController(title: message, message:"\(score)", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "reset", style: .default) {
+                (action) -> Void in self.score = 0
+                self.loadQuestions()
+            }
+            alert.addAction(alertAction)
+            present(alert, animated: true, completion: nil)
+        }
         resetColors()
     }
     
@@ -142,6 +175,7 @@ class SecondViewController: UIViewController {
    }
     
     func chooseQuestion() {
+        
         let index = Int(arc4random_uniform(UInt32(questions.count)))
         let question = questions[index]
         questions.remove(at: index)
